@@ -5,53 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="styles.css"> <!-- link to the CSS file for styling -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Conference ticket generator</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
+  <img src="assets\images\logo-full.svg" alt="Coding Conf Logo" class="logo">
+
+  <div class="initial hidden">
+  <div class="header">
+    <h2>Your Journey to Coding Conf 2025 Starts Here!</h2>
+    <p>Secure your spot at next year's biggest coding conference.</p>
+</div>
   <!-- Form starts -->
+   <form>
 
-  Your Journey to Coding Conf 2025 Starts Here!
+    <span>Upload Avatar</span>
+    <div class="avatar-container">
+    <label for ="avatar">
+      <img src="assets/images/icon-upload.svg" alt="Upload Icon" class="upload-icon">
+      
+      <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" style="display: none;" required>
+    </label>
+    <p class="info">Drag and drop or click to upload</p>
+  </div>
+  
+  <div class="disclaimer">
+    <img class="info-icon" src="assets/images/icon-info.svg">
+    <p >Upload your photo (JPG or PNG, max size: 500KB).</p>
+    </div>
+   
+    <label for="full-name">Full Name</label>
+    <input type="text" id="full-name" name="full-name" required>  
 
-  Secure your spot at next year's biggest coding conference.
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" placeholder="example@email.com" required>
 
-  Upload Avatar
-  Drag and drop or click to upload
-  Upload your photo (JPG or PNG, max size: 500KB).
+    <label for="github-username">GitHub Username</label>
+    <input type="text" id="github-username" name="github-username" placeholder="@yourusername" required>
+     
+    <button type="submit">Generate My Ticket</button>
 
-  Full Name
+  
 
-  Email Address
-  example@email.com
-
-  GitHub Username
-  @yourusername
-
-  Generate My Ticket
+  </form>
+  </div>
 
   <!-- Form ends -->
 
   <!-- Generated tickets starts -->
+   <div class="ticket" id="ticket">
 
-  Congrats, <!-- Full Name -->! Your ticket is ready.
+       <p>Congrats, <span id="full-name"><!-- Full Name --></span>! Your ticket is ready.</p>
+       <p> We've emailed your ticket to <span id="email"><!-- Email Address --></span> and will send updates in the run up to the event.</p>
 
-  We've emailed your ticket to <!-- Email Address --> and will send updates in the run up to the event.
+       <p>Coding Conf</p>
+       <time datetime="2025-01-31">Jan 31, 2025</time> / <span>Austin, TX</span>
 
-  Coding Conf
-  Jan 31, 2025 / Austin, TX
+       
+
+ 
+
+ 
+   </div>
+
+ 
 
   <!-- Generated tickets ends -->
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Pawanpreet Singh</a>.
-  </div>
+
 </body>
 </html>
