@@ -26,7 +26,7 @@ body {
 
 }
 
-.header h2, .ticket .header {
+.header h2,h1, .ticket .header {
     padding-bottom: 10px;
     text-align: center;
 }
@@ -174,9 +174,26 @@ button[type="submit"] {
 }
 
 .avatar-placeholder {
-    width: 25%;
+    width: 75px;
+    height: 75px;
+   
     border-radius: 10%;
     margin-top: 15px;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, hsl(7, 88%, 67%), hsl(245, 15%, 58%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.ticket-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  gap: 20px;
+   
 }
 
 

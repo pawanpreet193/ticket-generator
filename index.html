@@ -62,7 +62,7 @@
    <div class="ticket hidden" id="ticket">
 
       <div class="header">
-        <h2>Congrats, <span id="full-name-output"><!-- Full Name --></span>! Your ticket is ready.</h2>
+        <h1>Congrats, <span id="full-name-output" class="gradient-text"><!-- Full Name --></span>! Your ticket is ready.</h1>
         <p> We've emailed your ticket to <span id="email-output"><!-- Email Address --></span> and will send updates in the run up to the event.</p>
       </div>
 
@@ -76,11 +76,24 @@
           </div>
 
           <p class="time"><time datetime="2025-01-31">Jan 31, 2025</time> / <span>Austin, TX</span></p>
-          <img src="assets/images/image-avatar.jpg" alt="Avatar Placeholder" class="avatar-placeholder">
-          <img src="assets/images/icon-github.svg" alt="GitHub Icon" class="github-icon">
-          <p class="github-username" id="github-username-output"></p>
+
+          <div class="ticket-info">
+            <div class="ticket-info-item">
+              <img src="assets/images/image-avatar.jpg" alt="Avatar Placeholder" class="avatar-placeholder">
+            </div>
+
+            <div class="ticket-info-item">
+               <h2 class="avatar-name" id="avatar-name-output"><!-- Full Name --></h2>
+              <div class="ticket-header">
+              <img src="assets/images/icon-github.svg" alt="GitHub Icon" class="github-icon">
+              <p class="github-username" id="github-username-output"></p>
+              </div>
+              
+            </div>
+          
+          
         
-          <p class="avatar-name" id="avatar-name-output"><!-- Full Name --></p>
+        
        </div>
       </div>
    </div>
