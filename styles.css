@@ -184,6 +184,7 @@ button[type="submit"] {
 .gradient-text {
     background: linear-gradient(90deg, hsl(7, 88%, 67%), hsl(245, 15%, 58%));
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
