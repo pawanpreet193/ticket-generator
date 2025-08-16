@@ -69,6 +69,9 @@ body {
     border: 2px solid hsl(245, 15%, 58%);
     background-color: hsla(245, 19%, 35%, 0.5);
     border-radius: 10px;
+   width: 50px ;
+   height: 50px;
+    object-fit: cover;
     padding: 4px;
 }
 
@@ -95,16 +98,28 @@ label {
     display: none !important;
 } 
 
+.error-message {
+  font-size: 0.8rem;
+  color: hsl(7, 88%, 67%);
+  margin: 3px 0;
+}
+
+
 input[type="text"], input[type="email"] {
   width: 100%;
   padding: 12px 14px;
   border-radius: 10px; 
   border: 1px solid hsl(245, 15%, 58%);
-  background-color: hsla(245, 19%, 35%, 0.9); 
+  background-color: hsla(245, 19%, 35%, 0.2); 
   color: #fff;
   font-size: 14px;
   outline: none;
   margin: 5px 0 10px 0;
+}
+
+input:hover {
+    background-color: hsla(245, 19%, 35%, 0.9); 
+
 }
 
 input[type="text"]::placeholder, input[type="email"]::placeholder {
@@ -184,7 +199,7 @@ button[type="submit"] {
         width: 100%;
         padding: 4%;
         background-image: url('assets/images/pattern-squiggly-line-top.svg'),url('assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg'), url('assets/images/pattern-lines.svg'), url('assets/images/pattern-circle.svg'), url('assets/images/background-tablet.png');
-        background-size: 25% 25%, 75% , 100%, 50% auto, cover;
+        background-size: 25% 25%, 45% , 100%, 20%, cover;
         background-repeat: no-repeat;
 
         background-position: top right, bottom left, top center, right center, center center;
@@ -220,7 +235,7 @@ button[type="submit"] {
         width: 100%;
         padding: 4%;
         background-image: url('assets/images/pattern-squiggly-line-top.svg'),url('assets/images/pattern-squiggly-line-bottom-desktop.svg'), url('assets/images/pattern-lines.svg'), url('assets/images/pattern-circle.svg'), url('assets/images/background-desktop.png');
-        background-size: 25% 25%, 75% , 100%, 50% auto, cover;
+        background-size: 25% 25%, 45% , 100%, 20%, cover;
         background-repeat: no-repeat;
 
         background-position: top right, bottom left, top center, right center, center center;
@@ -248,3 +263,5 @@ button[type="submit"] {
 }
     
 } 
+
+
