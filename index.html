@@ -16,7 +16,7 @@
 
   <img src="assets\images\logo-full.svg" alt="Coding Conf Logo" class="logo">
 
-  <div class="initial hidden">
+  <div class="initial">
   <div class="header">
     <h2>Your Journey to Coding Conf 2025 Starts Here!</h2>
     <p>Secure your spot at next year's biggest coding conference.</p>
@@ -50,33 +50,44 @@
      
     <button type="submit">Generate My Ticket</button>
 
-  
-
   </form>
   </div>
 
   <!-- Form ends -->
 
   <!-- Generated tickets starts -->
-   <div class="ticket" id="ticket">
+   <div class="ticket hidden" id="ticket">
 
-       <p>Congrats, <span id="full-name"><!-- Full Name --></span>! Your ticket is ready.</p>
-       <p> We've emailed your ticket to <span id="email"><!-- Email Address --></span> and will send updates in the run up to the event.</p>
+      <div class="header">
+        <h2>Congrats, <span id="full-name-output"><!-- Full Name --></span>! Your ticket is ready.</h2>
+        <p> We've emailed your ticket to <span id="email-output"><!-- Email Address --></span> and will send updates in the run up to the event.</p>
+      </div>
 
-       <p>Coding Conf</p>
-       <time datetime="2025-01-31">Jan 31, 2025</time> / <span>Austin, TX</span>
+      <div class="ticket-container">
+        <img src="assets/images/pattern-ticket.svg" alt="Ticket Pattern" class="ticket-pattern">
+        
+        <div class="ticket-details">
+          <div class="ticket-header">
+            <img src="assets/images/logo-mark.svg" alt="Coding Conf Logo" class="logo-ticket">
+            <h2>Coding Conf</h2>
+          </div>
 
-       
-
- 
-
- 
+          <p class="time"><time datetime="2025-01-31">Jan 31, 2025</time> / <span>Austin, TX</span></p>
+          <img src="assets/images/image-avatar.jpg" alt="Avatar Placeholder" class="avatar-placeholder">
+          <img src="assets/images/icon-github.svg" alt="GitHub Icon" class="github-icon">
+          <p class="github-username" id="github-username-output"></p>
+        
+          <p class="avatar-name" id="avatar-name-output"><!-- Full Name --></p>
+       </div>
+      </div>
    </div>
 
  
 
   <!-- Generated tickets ends -->
   
-
+<script src="script.js"></script> 
 </body>
+
+
 </html>

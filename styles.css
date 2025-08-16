@@ -12,8 +12,6 @@ body {
     }
 
 
-    
-
 
 :root {
     --secondary-font-color: hsl(252, 6%, 83%);
@@ -28,17 +26,18 @@ body {
 
 }
 
-.header h2 {
+.header h2, .ticket .header {
     padding-bottom: 10px;
+    text-align: center;
 }
 
-.info {
+.info, .time {
     font-size: 0.8rem;
     color: var(--secondary-font-color);
     margin-top: 10px;
 }
 
-.header p {
+.header p, .ticket .header{
     font-weight: 400px;
     font-size: 0.80rem;
     color: var(--secondary-font-color);
@@ -46,9 +45,11 @@ body {
 
 .logo {
     padding-bottom: 25px;
+    display: block;
+    margin: 0px auto;
 }
 
-.header {
+.header, .ticket header {
     text-align: center;
    
 }
@@ -91,8 +92,8 @@ label {
 }
 
 .hidden {
-    display: none;
-}   
+    display: none !important;
+} 
 
 input[type="text"], input[type="email"] {
   width: 100%;
@@ -114,8 +115,6 @@ input[type="text"]::placeholder, input[type="email"]::placeholder {
 input:focus {
     border: 5px double hsl(245, 15%, 58%);
     
-    /* outline: 1px solid hsl(245, 15%, 58%); 
-     */
 
 }
 
@@ -132,10 +131,42 @@ button[type="submit"] {
 }
 
 
+.ticket-pattern {
+    width: 100%;
+    margin: 40px 0 80px 0;
+}
+
+.ticket-container {
+    position: relative;
+}
+
+
+.ticket-details {
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
+.ticket-header {
+    display: inline-flex;
+    gap : 10px;
+    align-items: center;
+
+}
+
+.time {
+    text-indent: 12%;
+}
+
+.avatar-placeholder {
+    width: 25%;
+    border-radius: 10%;
+    margin-top: 15px;
+}
 
 
 
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     body {
        width: 100%;
        padding: 4%;
@@ -147,9 +178,73 @@ button[type="submit"] {
     }
 }
 
-@media  (min-width: 376px) and (max-width: 768px) {
+@media  (min-width: 480px) 
+ and (max-width: 768px) {
     body {
-        display: none;
+        width: 100%;
+        padding: 4%;
+        background-image: url('assets/images/pattern-squiggly-line-top.svg'),url('assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg'), url('assets/images/pattern-lines.svg'), url('assets/images/pattern-circle.svg'), url('assets/images/background-tablet.png');
+        background-size: 25% 25%, 75% , 100%, 50% auto, cover;
+        background-repeat: no-repeat;
+
+        background-position: top right, bottom left, top center, right center, center center;
     }
+
+    .ticket-pattern {
+    width: 80%;
+    margin: 40px 0 80px 0;
+}
+
+.ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.initial {
+    width: max(40%, 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+    
+} 
+
+@media  (min-width: 768px) 
+  {
+    body {
+        width: 100%;
+        padding: 4%;
+        background-image: url('assets/images/pattern-squiggly-line-top.svg'),url('assets/images/pattern-squiggly-line-bottom-desktop.svg'), url('assets/images/pattern-lines.svg'), url('assets/images/pattern-circle.svg'), url('assets/images/background-desktop.png');
+        background-size: 25% 25%, 75% , 100%, 50% auto, cover;
+        background-repeat: no-repeat;
+
+        background-position: top right, bottom left, top center, right center, center center;
+    }
+
+    .ticket-pattern {
+    width: 80%;
+    margin: 40px 0 80px 0;
+}
+
+.ticket {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.initial {
+    width: max(40%, 300px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
     
 } 
